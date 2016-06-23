@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="IRTDocs2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IRTDocs2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d">
+
+    <Grid  Name="BackgroundGrid"
+           Background="#AA9FB1" >
+
+        <Button Name="AddImage1" 
+                Content="Add image 1" 
+                Click="AddImage1_Click" 
+                Margin="10,100,0,120"/>
+
+        <Button Name="AddImage2" 
+                Content="Add image 2" 
+                Click="AddImage2_Click" 
+                Margin="10,260,0,120"/>
+
+        <Button Name="AddImage3" 
+                Content="Add image 3" 
+                Click="AddImage3_Click" 
+                Margin="10,420,0,120"/>
+
+        <StackPanel>
+            <canvas:CanvasAnimatedControl Name="Qr" 
+                                          Height="425"
+                                          Width="425"
+                                          Draw="Qr_OnDraw"
+                                          CreateResources="Qr_OnCreateResources"
+                                          PointerPressed="Qr_OnPointerPressed">
+            </canvas:CanvasAnimatedControl>
+        </StackPanel>
+    </Grid>
+</Page>
